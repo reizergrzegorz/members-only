@@ -1,0 +1,14 @@
+<p>New Post</p>
+
+<%= form_with model: @post do |form| %>
+
+    <div>
+        <%= form.label :title, "Title" %>
+        <%= form.text_field :title, default: "Prepopulated Value", size: 20 %>
+    </div>    
+    <div>
+        <%= form.label :text, "Text" %>
+        <%= form.text_area :body, placeholder: "Write Your post here" %>
+        <%= form.submit %>
+    </div>    
+<% end %>
