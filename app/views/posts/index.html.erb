@@ -9,3 +9,10 @@
         <p>Content: <%= post.body %></p>
     </div><br>
 <% end %>
+
+<% if user_signed_in? %>
+    <p>Create a new post <%= link_to "here", new_post_path %></p>
+    
+<% else %>
+    <p>Sign in <%= link_to "here", user_session_path %></p>
+<% end %>
